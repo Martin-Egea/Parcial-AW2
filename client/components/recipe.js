@@ -1,3 +1,5 @@
+
+
 export const recipe = (title, ing)=>{
     return `
     <li>
@@ -12,3 +14,4 @@ export const recipe = (title, ing)=>{
     </li>
     `
 }
+

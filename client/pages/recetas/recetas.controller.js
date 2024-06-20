@@ -6,11 +6,16 @@ const btnAdd = document.getElementById("add")
 const btnCancel = document.getElementById("cancel")
 const btnCreate = document.getElementById('create')
 
+
+
 const arrIng = []
 
 btnCreate.addEventListener('click',()=>{
     const name = document.getElementById("name").value
+    const cantidad = document.getElementById("quantity").value
     /*Se debe añadir la receta creada al servidor */
+
+
 })
 
 btnAdd.addEventListener('click',()=>{
@@ -42,8 +47,8 @@ window.addEventListener('load', async()=> {
         recetasData.forEach(e => {
             ListaDeRecetas += recipe(e.nombre, e.ingredientes)
         });
-
-        document.getElementById('listRecipe').innerHTML = ListaDeRecetas
-    
+        document.getElementById('listRecipe').innerHTML = ListaDeRecetas    
         //document.getElementById('listRecipe').innerHTML = recipe("Pizza", [{name:"Queso", quantity:120}, {name:"Salsa", quantity:150}])
+
+        
 })
