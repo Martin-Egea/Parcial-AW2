@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nombre": "Pastel de Chocolate",
+    "ingredientes": [
+      {
+        "id": 1,
+        "cantidad": "200"
+      },
+      {
+        "id": 2,
+        "cantidad": "100"
+      },
+      {
+        "id": 3,
+        "cantidad": "3"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "probando3",
+    "ingredientes": [
+      {
+        "id": 1,
+        "cantidad": "111"
+      },
+      {
+        "id": 2,
+        "cantidad": "111"
+      },
+      {
+        "id": 3,
+        "cantidad": "111"
+      }
+    ]
+  }
+]
