@@ -18,10 +18,16 @@ router.get('/infoIngredientes', async (req, res) => {
 
 //Crear nuevo ingrediente
 router.post('/agregarIngredientes', (req, res) => {
-    const {id,nombre} = req.body
+    const id = ingredientData[ingredientData.length -1].id +1
+    const nombre = req.body.nombre
+
+    const nuevoIngrediente = {
+        id,
+        nombre
+    }
 
     try {
-        ingredientData.push({id,nombre})
+        ingredientData.push(nuevoIngrediente)
         writeFile('./data/ingredientes.json', JSON.stringify(ingredientData,null,2))
         res.status(200).json({status:true})
     } catch (error) {

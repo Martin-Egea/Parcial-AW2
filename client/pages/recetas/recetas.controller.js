@@ -1,4 +1,6 @@
+import { infoRecetas, nuevaReceta } from "../../api/recipe.api.js"
 import { recipe } from "../../components/recipe.js"
+
 
 const btnAdd = document.getElementById("add")
 const btnCancel = document.getElementById("cancel")
@@ -28,10 +30,20 @@ btnCancel.addEventListener('click',()=>{
     document.getElementById('list').innerHTML = ''
 })
 
-window.addEventListener('load', function() {
+window.addEventListener('load', async()=> {
     /*Llenar lista con las recetas existentes
         Se debe usar el componente recipe que recibe dos parametros, title y un array con los ingredientes de la receta llamado ing
     */
+        const recetasData = await infoRecetas()
+        console.log(recetasData)
 
-    document.getElementById('listRecipe').innerHTML = recipe("Pizza", [{name:"Queso", quantity:120}, {name:"Salsa", quantity:150}])
+        let ListaDeRecetas = ''
+
+        recetasData.forEach(e => {
+            ListaDeRecetas += recipe(e.nombre, e.ingredientes)
+        });
+
+        document.getElementById('listRecipe').innerHTML = ListaDeRecetas
+    
+        //document.getElementById('listRecipe').innerHTML = recipe("Pizza", [{name:"Queso", quantity:120}, {name:"Salsa", quantity:150}])
 })

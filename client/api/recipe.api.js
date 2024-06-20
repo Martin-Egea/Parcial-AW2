@@ -32,7 +32,7 @@ export const nuevaReceta = async(nuevaReceta)=>{
                 'Content-Type': 'application/json'
             }
         })
-        return res
+        return res.json()
 
     } catch (error) {
         console.log(error)

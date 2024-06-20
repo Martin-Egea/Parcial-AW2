@@ -23,11 +23,11 @@ export const infoIngredientes = async()=>{
 }
 
 //crea un nuevo ingrediente
-export const nuevoIngrediente = async(nuevoIngrediente)=>{
+export const nuevoIngrediente = async(nombre)=>{
     try {
         const res = await fetch(`${API}/ingredientes/agregarIngredientes`,{
             method: 'POST',
-            body: JSON.stringify(nuevoIngrediente),
+            body: JSON.stringify(nombre),
             headers:{
                 'Content-Type': 'application/json'
             }
