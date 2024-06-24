@@ -7,7 +7,7 @@ export const recipe = (title, ing)=>{
         <ul class="px-5 py-2 list-disc">
             ${
                 ing.map(e=>(
-                    `<li class="text-slate-800">${e.id} ${e.cantidad}</li>`
+                    `<li class="text-slate-800">${e.id} - Cant: ${e.cantidad}</li>`
                 )).join('')
             }
         </ul>

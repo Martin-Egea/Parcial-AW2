@@ -18,5 +18,13 @@
   {
     "id": 5,
     "nombre": "Sal"
+  },
+  {
+    "id": 6,
+    "nombre": "Pimienta"
+  },
+  {
+    "id": 7,
+    "nombre": "Aceite"
   }
 ]

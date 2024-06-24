@@ -13,12 +13,12 @@ window.addEventListener('load', async()=> {
     });
     
     /*Creación de nuevo ingrediente */
-    btnCreate.addEventListener('click', async()=>{
+    btnCreate.addEventListener('click',async()=>{
         const name = document.getElementById("name").value
         
         if (name != '') {
-            console.log(name)
             await nuevoIngrediente(name)
+            location.reload()
         } else {
             alert('el campo de nombre es obligatorio!!')
         }

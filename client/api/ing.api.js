@@ -27,7 +27,7 @@ export const nuevoIngrediente = async(nombre)=>{
     try {
         const res = await fetch(`${API}/ingredientes/agregarIngredientes`,{
             method: 'POST',
-            body: JSON.stringify(nombre),
+            body: JSON.stringify({nombre}),
             headers:{
                 'Content-Type': 'application/json'
             }
